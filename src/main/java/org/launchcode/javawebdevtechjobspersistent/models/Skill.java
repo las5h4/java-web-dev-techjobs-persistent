@@ -14,7 +14,7 @@ public class Skill extends AbstractEntity {
     @Size(min = 15, max = 250, message = "Description must be 15-250 characters in length")
     private String description;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "skills")
     private final List<Job> jobs = new ArrayList<>();
 
     public Skill(String description) {
