@@ -68,7 +68,7 @@ public class HomeController {
         }
         newJob.setSkills(skillObjs);
         jobRepository.save(newJob);
-        model.addAttribute("jobs", employerRepository.findAll());
+        model.addAttribute("jobs", jobRepository.findAll());
 
         return "redirect:";
     }
